@@ -1,0 +1,28 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+
+
+
+@{
+	var selection = Model.Content.Site().FirstChild("projectsMain").Children()
+						.Where(x => x.IsVisible())
+						.OrderBy("CreateDate desc").Take(2);
+}
+@{
+  var projects =  CurrentPage.Site().Children()
+    .Where("DocumentTypeAlias == \"projectsMain\"")
+    .First()
+    .Children
+    .Where("status.Contains(\"Completed\")")
+    .Where("Visible")
+    .OrderBy("CreateDate desc")
+    .Take(2);
+}
+<ul>
+	@foreach(var project in projects){
+		<li>
+			<a href="@project.Url">@project.Name</a>
+		</li>
+	
+	}
+</ul>
+

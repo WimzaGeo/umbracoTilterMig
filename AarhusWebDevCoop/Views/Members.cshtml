@@ -1,0 +1,9 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = "Master.cshtml";
+}
+
+@* the fun starts here *@
+<div>
+    @Umbraco.RenderMacro("DisplayAllMembersMacro")
+</div>
