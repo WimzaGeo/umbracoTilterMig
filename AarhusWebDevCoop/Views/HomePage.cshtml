@@ -3,6 +3,16 @@
 @{
 	Layout = "Master.cshtml";
 }
-@Umbraco.Field("content")
-
-@Umbraco.RenderMacro("TwoNewestProjects")
+<div class="background-container">
+<div class="center-container">
+    <h1 class="homepage-welcome">VELKOMMEN TIL DE GLADE SVIN</h1>
+    <img class="homepage-image-image" src="https://pbs.twimg.com/profile_images/2832492645/fa13a808370a59fdffb5a2a78c635c7f_400x400.png"/>
+    <div class="homepage-welcome">
+        Ved en 14-tiden tog vi ned til en svensk familie. De søgte en barnepige til nødsituationer og også gerne et par timer, så moren har mulighed for at løbe sig en tur eller lignende. Selvom jeg godt forstod det meste dernede, så skulle jeg dælme koncentrere mig meget. Min au pair mor forstår det og snakker det også.. hun kan bare snakke mange sprog. De ville gerne have mig på prøve, for at se om det gik. Det tror jeg nu det kommer til.
+    </div>
+    <h3 class="homepage-welcome">Her er de 2 nyeste færdige projekter</h3>
+        <div class="homepage-welcome">
+            @Umbraco.RenderMacro("TwoNewestProjects")
+        </div>
+    </div>
+</div>

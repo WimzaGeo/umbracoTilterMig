@@ -1,0 +1,73 @@
+body {
+	display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.background-container {
+	background-image : url("https://vignette.wikia.nocookie.net/metalgear/images/9/99/Venom_Snake_TTP.png/revision/latest/scale-to-width-down/350?cb=20150928230254");
+	background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+.snake-background2 {
+	background-image: url("https://www.technobuffalo.com/wp-content/uploads/2015/08/MGS-Characters-Big-Boss.jpg");
+	background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+	height:100%;
+}
+
+
+.navbar-inverse .navbar-nav>li>a {
+    color: gold;
+}
+.navbar-inverse .navbar-brand {
+    color: gold;
+}
+
+.site-content {
+	flex: 1;
+}
+.navbar {
+	position: relative;
+    min-height: 50px;
+    margin-bottom: 0px;
+    border: 1px solid transparent;
+}
+.homepage-image-image {
+	max-width: 100%;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: gold;
+}
+li {
+	list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.center-container {
+	 width: 400px;
+    margin: 0 auto;
+    background-color: currentColor;
+    border: gold;
+    border-radius: 28px;
+    border-style: solid;
+    border-width: 3px;
+}
+.homepage-welcome {
+	color: gold;
+    font-family: monospace;
+    text-align: center;
+    padding: 20px;
+}
+.member-container {
+	border: aqua;
+    border-style: groove;
+    flex-flow: row;
+}
+.display-flex {
+	display:flex;
+}
+

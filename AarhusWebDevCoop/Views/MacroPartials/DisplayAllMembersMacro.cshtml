@@ -8,8 +8,9 @@ var activeMembers = memberActiveService.GetMembersByGroup("Active");
 
 }
 <h1>Active Members</h1>
+<div class="display-flex">
 @foreach (var member in activeMembers) {
-<p>
+<div class="member-container">
     @(member.GetValue("firstname") + " "
     + member.GetValue("lastname")) <br/>
     @member.GetValue("address")<br />
@@ -25,9 +26,11 @@ var activeMembers = memberActiveService.GetMembersByGroup("Active");
         srcPath = srcPath.Replace("}", "");
     }
        <img class="img-responsive" src="@srcPath" style="width:100px;height:100px;" />
-</p>
+</div>
 }
+</div>
 <h1>Prospect Members</h1>
+<div class="display-flex">
 @{
 var memberProspectService =
 ApplicationContext.Current.Services.MemberService;
@@ -37,12 +40,13 @@ var prospectMembers = memberProspectService.GetMembersByGroup("Prospect");
 
 @foreach (var member in prospectMembers) 
 {
-<p>
+<div class="member-container">
     @(member.GetValue("firstname") + " "
     + member.GetValue("lastname")) <br/>
     @member.GetValue("address")<br />
     @(member.GetValue("zip") + " "
     + member.GetValue("city"))
     Mobile: @member.GetValue("mobile")<br />
-</p>
+</div>
 }
+</div>
