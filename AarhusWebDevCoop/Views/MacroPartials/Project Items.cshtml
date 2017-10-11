@@ -4,10 +4,11 @@
 	var selection = Model.Content.Site().FirstChild("projectsMain").Children()
 						.Where(x => x.IsVisible());
 }
+
 <ul>
 	@foreach(var item in selection){
 		<li class="homepage-welcome">
-			<a href="@item.Url">@item.Name</a>
+			<i class="arrow right"></i><a href="@item.Url"> @item.Name</a>
 		</li>
 	}
 </ul>

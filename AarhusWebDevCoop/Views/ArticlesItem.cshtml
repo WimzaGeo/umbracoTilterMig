@@ -3,5 +3,13 @@
 @{
 	Layout = "Master.cshtml";
 }
-@Umbraco.Field("itemTitle") </br>
-@Umbraco.Field("itemDescriptionText") </br>
+
+<div class="item-container">
+    <div>
+        <h1>@Umbraco.Field("itemTitle")</h1>
+        <div class="item-bodytext">
+            <p>@Umbraco.Field("itemDescriptionText")</p>
+        </div>
+        
+    </div>
+</div>

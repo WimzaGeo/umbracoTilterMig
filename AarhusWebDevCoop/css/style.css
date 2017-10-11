@@ -3,6 +3,23 @@ body {
     min-height: 100vh;
     flex-direction: column;
 }
+a {
+    color: gold;
+    font-family: monospace;
+}
+
+h2 {
+    text-decoration: underline;
+    color: gold;
+    font-family: monospace;
+    text-align: center;
+}
+
+a:focus, a:hover {
+    color: darkgoldenrod;
+    text-decoration: underline;
+}
+
 .background-container {
 	background-image : url("https://vignette.wikia.nocookie.net/metalgear/images/9/99/Venom_Snake_TTP.png/revision/latest/scale-to-width-down/350?cb=20150928230254");
 	background-size:     cover;
@@ -15,6 +32,20 @@ body {
     background-repeat:   no-repeat;
     background-position: center center;
 	height:100%;
+}
+
+.silhouette-background3 {
+	background-image: url("https://scontent-frt3-1.xx.fbcdn.net/v/t34.0-12/22414635_10155833409099777_1723062249_n.png?oh=1afe67a61bc92893a1579a9c245422be&oe=59E07660");
+	background-size:     contain;
+    background-repeat:   repeat;
+    background-position: center center;
+}
+
+.img-responsive {
+	width:100px;
+	height:100px;
+    display: inline;
+    border-radius: inherit;
 }
 
 
@@ -41,6 +72,10 @@ body {
     border-width: 2px;
     border-color: gold;
 }
+ul {
+	padding:0;
+}
+
 li {
 	list-style-type: none;
     padding: 0;
@@ -56,18 +91,105 @@ li {
     border-style: solid;
     border-width: 3px;
 }
+
+.pig-icon {
+	height:45px;
+}
+
+
+.item-container{
+	padding-bottom: 20px;
+    width: 600px;
+    margin: 0 auto;
+    background-color: #333;
+    border: gold;
+    border-radius: 28px;
+    border-style: solid;
+    border-width: 3px;
+	height: calc(100%-100px);
+}
+
+.item-bodytext {
+    border: gold;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 3px;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.item-bodytext p{
+    margin: 10px 0 10px;
+	padding: 20px;
+}
+
+
+.item-container div{
+	color: gold;
+    text-align: center;
+}
+
 .homepage-welcome {
 	color: gold;
     font-family: monospace;
     text-align: center;
     padding: 20px;
 }
+
 .member-container {
-	border: aqua;
-    border-style: groove;
+	padding:20px;
+	margin-right: 10px;
+    border-radius: 20px;
+    border: goldenrod;
+    border-style: solid;
     flex-flow: row;
+    background: #333;
+    color: gold;
+    font-family: monospace;
+    text-align: center;
+	margin:auto;
 }
 .display-flex {
 	display:flex;
+	width: 600px;
+    margin: 0 auto;
 }
 
+.color-gold{
+	color: gold;
+}
+
+.arrow {
+    border: solid gold;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
+    color: black;
+    background-color: gold;
+}
+
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+    color: black;
+    background-color: gold;
+}
+
+.navbar-nav>li>.dropdown-menu {
+    margin-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background: gold;
+}
+
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+    color: gold;
+    text-decoration: none;
+    background-color: #333;
+}
