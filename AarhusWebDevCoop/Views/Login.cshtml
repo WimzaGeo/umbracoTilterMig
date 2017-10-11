@@ -3,7 +3,6 @@
 	Layout = "Master.cshtml";
 }
 
-@* the fun starts here *@
 @if(!Members.GetCurrentLoginStatus().IsLoggedIn) {
     @Html.Partial("Login")
 } else {

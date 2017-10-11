@@ -20,14 +20,6 @@
 	
 
 </head>
-@if (!Members.GetCurrentLoginStatus().IsLoggedIn) {
-<p>hallo?</p>
-}
-else {
-<p>You are currently logged in as
-@Members.GetCurrentLoginStatus().Name</p>
-
-}
 	<div id="header-container">
     	<nav>
     		@Umbraco.RenderMacro("HomePageMacro")

@@ -3,54 +3,61 @@
     Layout = null;
 }
 
-    <div>
-        @using (Html.BeginUmbracoForm("HandleFormSubmit", "ContactFormSurface", new object { },
-                new { @class = "form-horizontal" }))
+
+        @if (TempData["success"] == null)
         {
-            <form class="form-horizontal">
-                <fieldset>
+            <div>
+                @using (Html.BeginUmbracoForm("HandleFormSubmit", "ContactFormSurface", new object { },
+                new { @class = "form-horizontal" }))
+                {
+                    <fieldset>
 
-                    <!-- Form Name -->
-                    <legend>Form Name</legend>
+                        <!-- Form Name -->
+                        <legend>Form Name</legend>
 
-                    <!-- Text input-->
+                        <!-- Text input-->
 
-                    <div class="form-group">
-                        @Html.LabelFor(m => m.Name, new { @class = "col-md-4 control-label" })
-                        <div class="col-md-4">
-                            @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "Name" })
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Name, new { @class = "col-md-4 control-label" })
+                            <div class="col-md-4">
+                                @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "Name" })
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Text input-->
-                    <div class="form-group">
-                        @Html.LabelFor(m => m.Email, new { @class = "col-md-4 control-label" })
-                        <div class="col-md-4">
-                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email" })
+                        <!-- Text input-->
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Email, new { @class = "col-md-4 control-label" })
+                            <div class="col-md-4">
+                                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email" })
+                            </div>
                         </div>
-                    </div>
-                    <!-- Text input-->
-                    <div class="form-group">
-                        @Html.LabelFor(m => m.Subject, new { @class = "col-md-4 control-label" })
-                        <div class="col-md-4">
-                            @Html.TextBoxFor(m => m.Subject, new { @class = "form-control", placeholder = "Subject" })
+                        <!-- Text input-->
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Subject, new { @class = "col-md-4 control-label" })
+                            <div class="col-md-4">
+                                @Html.TextBoxFor(m => m.Subject, new { @class = "form-control", placeholder = "Subject" })
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Textarea -->
-                    <div class="form-group">
-                        @Html.LabelFor(m => m.Message, new { @class = "col-md-4 control-label" })
-                        <div class="col-md-4">
-                            @Html.TextAreaFor(m => m.Message, new { @class = "form-control", placeholder = "Message" })
+                        <!-- Textarea -->
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Message, new { @class = "col-md-4 control-label" })
+                            <div class="col-md-4">
+                                @Html.TextAreaFor(m => m.Message, new { @class = "form-control", placeholder = "Message" })
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-6">
-                            <button id="contact-submit" type="submit" class="btn btn-primary input-medium pull-left">Send</button>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-6">
+                                <button id="contact-submit" type="submit" class="btn btn-primary input-medium pull-left">Send</button>
+                            </div>
                         </div>
-                    </div>
-                </fieldset>
-            </form>
+                    </fieldset>
+                }
+            </div>
         }
-    </div>
+        else
+        {
+            <p>Thank you for contacting us. We’ll be in touch soon!</p>
+        }
+
 
